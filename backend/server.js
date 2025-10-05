@@ -31,7 +31,7 @@ app.use('/upload',express.static(path.join(__dirname,'uploads'),{}));
 // routes
 
 app.use('/api/auth',authRoutes);
-// app.use('/api/sessions',sessionRoutes);
+app.use('/api/sessions',sessionRoutes);
 // app.use('/api/questions',questionRoutes);
 
 
