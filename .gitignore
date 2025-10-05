@@ -1,0 +1,47 @@
+# ------------------------
+# Node modules
+# ------------------------
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# ------------------------
+# Env files
+# ------------------------
+.env
+backend/.env
+frontend/rox/.env
+
+# ------------------------
+# Logs
+# ------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ------------------------
+# Build / dist folders
+# ------------------------
+frontend/rox/dist/
+frontend/rox/build/
+backend/build/
+
+# ------------------------
+# Frontend Vite / local files
+# ------------------------
+frontend/rox/.vite/
+frontend/rox/local/
+
+# ------------------------
+# OS / editor files
+# ------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# ------------------------
+# Optional: uploads / temp files
+# ------------------------
+backend/uploads/
