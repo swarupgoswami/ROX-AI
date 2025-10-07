@@ -32,7 +32,7 @@ app.use('/upload',express.static(path.join(__dirname,'uploads'),{}));
 
 app.use('/api/auth',authRoutes);
 app.use('/api/sessions',sessionRoutes);
-// app.use('/api/questions',questionRoutes);
+app.use('/api/questions',questionRoutes);
 
 
 // app.use("/api/ai/generate-questions",protect,generateInterviewQuestions);
