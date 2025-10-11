@@ -8,6 +8,10 @@ connectDB=require('./config/db');
 const authRoutes=require('./routes/authRoutes');
 const sessionRoutes=require('./routes/sessionRoutes');
 const questionRoutes=require('./routes/questionRoutes');
+const {protect}=require('./middlewares/authMiddleware');
+
+const {generateInterviewQuestions}=require('./controllers/aiController');
+const {generateConceptExplanation}=require('./controllers/aiController');
 
 
 
@@ -35,8 +39,8 @@ app.use('/api/sessions',sessionRoutes);
 app.use('/api/questions',questionRoutes);
 
 
-// app.use("/api/ai/generate-questions",protect,generateInterviewQuestions);
-// app.use("/api/ai/generate-explanations",protect,generateConceptExplanation);
+app.use("/api/ai/generate-questions",protect,generateInterviewQuestions);
+app.use("/api/ai/generate-explanations",protect,generateConceptExplanation);
 
 
 const PORT=process.env.PORT || 5000;
